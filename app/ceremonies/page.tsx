@@ -10,7 +10,7 @@ const allPoojas = [
     price: "₹5,100",
     category: "Home & Office",
     tag: "Bestseller",
-    images: ['/Grihpravesh_3.jpg', '/Grihpravesh_4.jpg'],
+    images: ['/Grihpravesh_3.png', '/Grihpravesh_4.png'],
     description: "The complete auspicious beginning for your new home, including Navagraha Havan and Vastu Shanti to ensure prosperity and remove negative energies."
   },
   {
@@ -132,6 +132,7 @@ export default function CeremoniesCatalog() {
             <div key={pooja.id} className="animate-fade-in-up">
               <PoojaCard 
                 title={pooja.title}
+                shortdesc={pooja.description}
                 description={pooja.description}
                 price={pooja.price}
                 tag={pooja.tag}
