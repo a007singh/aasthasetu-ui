@@ -275,12 +275,16 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
               </span>
             </div>
 
-            <div className="font-serif font-bold text-x1 text-base text-deep-ocean font-medium leading-relaxed mb-8 whitespace-pre-wrap">
+            {/* <div className="font-serif font-bold text-x1 text-base text-deep-ocean font-medium leading-relaxed mb-8 whitespace-pre-wrap">
+              {description}
+            </div> */}
+
+            <div className="font-serif font-semibold text-lg text-deep-ocean leading-relaxed mb-8 whitespace-pre-wrap drop-shadow-sm text-shadow-white/80 backdrop-blur-[1px]">
               {description}
             </div>
 
             <div className="p-4 bg-sunset/10 rounded-2xl font-bold border border-sunset/20 mb-8">
-               <p className="font-serif text-x1 text-deep-ocean italic">We ensure this sacred ritual is performed with the utmost devotion and strict adherence to Vedic traditions.</p>
+               <p className="font-serif text-xl text-deep-ocean italic font-semibold drop-shadow-sm text-shadow-white/90 backdrop-blur-[1px]">We ensure this sacred ritual is performed with the utmost devotion and strict adherence to Vedic traditions.</p>
             </div>
 
             <h4 className="font-serif text-deep-ocean font-bold text-xl mb-4">What's Included:</h4>
@@ -291,7 +295,7 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
                 'Floral Arrangements & Setup',
                 'Traditional Prasad & Bhog Preparation'
               ].map((item, index) => (
-                <li key={index} className="flex items-center gap-3 text-charcoal-muted font-semibold bg-white/50 p-4 rounded-2xl border border-white/40 shadow-sm">
+                <li key={index} className="font-serif flex items-center gap-3 text-charcoal-muted font-semibold bg-white/50 p-4 rounded-2xl border border-white/40 shadow-sm">
                   <div className="bg-sunset-light/20 p-1.5 rounded-full flex-shrink-0">
                     <svg className="w-4 h-4 text-sunset-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -332,10 +336,14 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
               
               {/* Refined Message */}
               <div className="flex-1 text-center sm:text-left">
-                <h4 className="font-serif text-x1 text-deep-ocean font-bold mb-1">
+                <span className="text-charcoal-muted text-sm font-medium flex items-center gap-1 bg-white/40 px-3 py-1.5 rounded-full whitespace-nowrap">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} /></svg>
+                  Book it now for a Hassle Free Experience
+                </span>
+                {/* <h4 className="font-serif text-2x1 text-deep-ocean font-bold mb-1">
                 Book it now for a Hassle Free Experience
-                </h4>
-                <p className="font-serif text-x1 text-deep-ocean/70 leading-relaxed">
+                </h4> */}
+                <p className="font-serif text-x1 text-deep-ocean/70 font-semibold leading-relaxed">
                 To schedule this ceremony, drop us a message with your date and time. We will handle the rest of the arrangements.
                 </p>
               </div>
@@ -343,7 +351,7 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
               {/* Action Buttons */}
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 {/* Call Button */}
-                <a 
+                {/* <a 
                   href="tel:+919876543210" 
                   className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-white text-deep-ocean hover:text-sunset font-bold py-2.5 px-4 rounded-xl shadow-sm border border-white/40 transition-all hover:shadow-md"
                 >
@@ -351,7 +359,7 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   Call
-                </a>
+                </a> */}
 
                 {/* WhatsApp Button */}
                 <a 

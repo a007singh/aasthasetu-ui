@@ -72,17 +72,17 @@ export default function WhyUsPage() {
       </header>
 
       {/* Main Content Area */}
-      <section className="max-w-7xl mx-auto pt-15 pb-24 px-6 relative z-10">
+      <section className="max-w-6xl mx-auto pt-25 pb-24 px-6 text-center relative z-10">
         
         {/* Header Title Section */}
         <div className="mx-auto max-w-3xl text-center mb-60">
-          <span className="font-serif inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold bg-white/10 backdrop-blur-sm border border-white/20 text-cream-light tracking-wide drop-shadow-sm mb-4 uppercase">
+          {/* <span className="font-serif inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold bg-white/10 backdrop-blur-sm border border-white/20 text-cream-light tracking-wide drop-shadow-sm mb-4 uppercase">
             Why Aastha Setu
-          </span>
+          </span> */}
 
           {/* ADDED: font-serif for the majestic main heading */}
-          <h1 className="font-serif text-center text-5xl md:text-7xl font-light text-white tracking-tight drop-shadow-hero leading-[0.75] -mb-8">
-            A sacred bridge to <span className="text-transparent bg-clip-text bg-gradient-to-r from-sunset-light to-sunset drop-shadow-glow">authentic devotion.</span>
+          <h1 className="font-serif text-5xl md:text-6xl mb-4 font-light tracking-tight leading-tight text-white drop-shadow-hero">
+          Why Aastha Setu ?
           </h1>
 
           <p className="font-serif text-xl md:text-2xl text-warm-gray/90 mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
