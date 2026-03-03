@@ -118,9 +118,9 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
           )}
         </div>
         
-        <h3 className="font-serif text-2xl text-white font-semibold mb-4 text-deep-ocean tracking-tight leading-tight drop-shadow-hero">{title}</h3>
+        <h3 className="font-serif text-2xl text-charcoal-muted font-semibold mb-4 text-deep-ocean tracking-tight leading-tight drop-shadow-hero">{title}</h3>
         
-        <p className="font-serif text-xl text-charcoal-muted text-base mb-8 flex-grow leading-relaxed font-bold">
+        <p className="font-serif text-lg text-white text-base mb-8 flex-grow leading-relaxed font-bold">
           {shortdesc}
         </p>
         

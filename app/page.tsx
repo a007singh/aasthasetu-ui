@@ -189,21 +189,21 @@ export default function Home() {
           {/* 1. Mobile Number / Call Us Pill */}
           <a 
             href="tel:+919876543210" 
-            className="font-serif group flex items-center space-x-4 bg-black/30 hover:bg-black/40 backdrop-blur-md px-6 py-3 md:py-4 rounded-full border border-white/15 hover:border-sunset/50 transition-all duration-300 shadow-2xl"
+            className="group flex items-center space-x-4 bg-black/30 hover:bg-black/40 backdrop-blur-md px-6 py-3 md:py-4 rounded-full border border-white/15 hover:border-sunset/50 transition-all duration-300 shadow-2xl"
           >
             <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 group-hover:bg-sunset transition-colors duration-300 shadow-sm border border-white/10">
               <svg className="w-4 h-4 md:w-5 md:h-5 text-white transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
             </div>
-            <span className="text-cream-light text-white font-medium font-semibold text-sm md:text-base tracking-wide drop-shadow-sm group-hover:text-black transition-colors">
+            <span className="text-cream-light text-white font-normal text-sm md:text-base tracking-wide drop-shadow-sm transition-colors">
               +91 98765 43210
             </span>
           </a>
 
           {/* 2. Existing Socials Pill */}
           <div className="flex items-center space-x-6 bg-black/30 backdrop-blur-md px-8 py-4 rounded-full border border-white/15 shadow-2xl">
-            <span className="font-serif text-cream-light text-white font-semibold text-sm md:text-base mr-2 pr-6 border-r border-white/20 tracking-wide drop-shadow-sm">
+            <span className="font-serif relative z-10 text-white text-cream-light group-hover:text-black font-semibold tracking-wide text-lg transition-colors duration-300 drop-shadow-sm">
               Connect with us
             </span>
             
