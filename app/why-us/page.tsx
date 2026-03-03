@@ -61,28 +61,31 @@ export default function WhyUsPage() {
       />
 
       {/* Header / Logo Section (Links back to home) */}
-      <header className="absolute top-6 left-6 md:top-8 md:left-10 z-50">
+      <header className="absolute top-1 left-1 md:top-1 md:left-1 z-50">
         <a href="/">
           <img 
             src="/logo.png" 
             alt="Aastha Setu Logo" 
-            className="h-24 md:h-32 w-auto mix-blend-multiply contrast-125 opacity-90 hover:opacity-100 transition-opacity cursor-pointer drop-shadow-sm"
+            className="h-24 md:h-50 w-auto mix-blend-multiply contrast-125 opacity-90 hover:opacity-100 transition-opacity cursor-pointer drop-shadow-sm"
           />
         </a>
       </header>
 
       {/* Main Content Area */}
-      <section className="max-w-7xl mx-auto pt-40 pb-24 px-6 relative z-10">
+      <section className="max-w-7xl mx-auto pt-15 pb-24 px-6 relative z-10">
         
         {/* Header Title Section */}
-        <div className="mx-auto max-w-3xl text-center mb-20">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold bg-white/10 backdrop-blur-sm border border-white/20 text-cream-light tracking-wide drop-shadow-sm mb-6 uppercase">
+        <div className="mx-auto max-w-3xl text-center mb-60">
+          <span className="font-serif inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold bg-white/10 backdrop-blur-sm border border-white/20 text-cream-light tracking-wide drop-shadow-sm mb-4 uppercase">
             Why Aastha Setu
           </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-hero text-cream-light mb-8">
+
+          {/* ADDED: font-serif for the majestic main heading */}
+          <h1 className="font-serif text-center text-5xl md:text-7xl font-light text-white tracking-tight drop-shadow-hero leading-[0.75] -mb-8">
             A sacred bridge to <span className="text-transparent bg-clip-text bg-gradient-to-r from-sunset-light to-sunset drop-shadow-glow">authentic devotion.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-warm-gray max-w-3xl mx-auto drop-shadow-md font-medium leading-relaxed">
+
+          <p className="font-serif text-xl md:text-2xl text-warm-gray/90 mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
             Rooted in tradition and purity, we ensure seamless arrangements with the utmost care, honoring your rituals and creating spiritually uplifting experiences.
           </p>
         </div>
@@ -92,32 +95,23 @@ export default function WhyUsPage() {
           {features.map((feature) => (
             <div 
               key={feature.title} 
-              className="group relative p-8 bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl transition-all duration-300 hover:bg-black/30 hover:border-white/25 hover:-translate-y-1 shadow-2xl"
+              className="font-serif font-semibold group relative p-8 bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl transition-all duration-300 hover:bg-black/30 hover:border-white/25 hover:-translate-y-1 shadow-2xl"
             >
               <div className="flex items-center gap-x-4 mb-6">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 shadow-inner border border-white/10 transition-colors duration-300 group-hover:bg-white/20">
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-bold tracking-wide text-cream-light drop-shadow-sm">
+                {/* ADDED: font-serif so the card titles match the main heading */}
+                <h3 className="font-serif text-2xl text-white font-semibold tracking-wide text-cream-light drop-shadow-sm">
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-lg leading-relaxed text-warm-gray drop-shadow-sm">
+              <p className="font-serif text-xl text-charcoal-muted text-base mb-8 flex-grow leading-relaxed font-semibold">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
-
-        {/* Back to Home CTA */}
-        {/* <div className="mt-20 flex justify-center">
-          <a
-            href="/"
-            className="bg-gradient-to-r from-sunset to-sunset-dark hover:from-sunset-light hover:to-sunset text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg transform hover:scale-105"
-          >
-            &larr; Return to Home
-          </a>
-        </div> */}
 
       </section>
     </main>

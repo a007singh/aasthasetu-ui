@@ -118,9 +118,9 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
           )}
         </div>
         
-        <h3 className="text-3xl font-bold mb-4 text-deep-ocean tracking-tight">{title}</h3>
+        <h3 className="font-serif text-2xl text-white font-semibold mb-4 text-deep-ocean tracking-tight leading-tight drop-shadow-hero">{title}</h3>
         
-        <p className="text-charcoal-muted text-base mb-8 flex-grow leading-relaxed font-medium">
+        <p className="font-serif text-xl text-charcoal-muted text-base mb-8 flex-grow leading-relaxed font-bold">
           {shortdesc}
         </p>
         
@@ -155,7 +155,7 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
             {/* Subtle animated shine effect on hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
             
-            <span className="relative z-10 text-cream-light group-hover:text-white font-semibold tracking-wide text-sm transition-colors duration-300 drop-shadow-sm">
+            <span className="relative z-10 text-white text-cream-light group-hover:text-black font-semibold tracking-wide text-sm transition-colors duration-300 drop-shadow-sm">
               View Details
             </span>
             
@@ -190,7 +190,7 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
         <div className="relative z-10 flex flex-col h-full">
           
           <div className="flex items-center justify-between p-6 border-b border-deep-ocean/10 bg-white/30 backdrop-blur-md">
-            <h2 className="text-2xl font-bold text-deep-ocean tracking-tight">{title}</h2>
+            <h2 className="font-serif text-2xl font-semibold text-deep-ocean tracking-tight">{title}</h2>
             <button 
               onClick={() => setIsDrawerOpen(false)}
               className="text-deep-ocean/70 hover:text-deep-ocean bg-white/50 hover:bg-white rounded-full p-2 transition-all shadow-sm"
@@ -275,23 +275,23 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
               </span>
             </div>
 
-            <div className="text-base text-deep-ocean font-medium leading-relaxed mb-8 whitespace-pre-wrap">
+            <div className="font-serif font-bold text-x1 text-base text-deep-ocean font-medium leading-relaxed mb-8 whitespace-pre-wrap">
               {description}
             </div>
 
             <div className="p-4 bg-sunset/10 rounded-2xl font-bold border border-sunset/20 mb-8">
-               <p className="text-sm text-deep-ocean italic">We ensure this sacred ritual is performed with the utmost devotion and strict adherence to Vedic traditions.</p>
+               <p className="font-serif text-x1 text-deep-ocean italic">We ensure this sacred ritual is performed with the utmost devotion and strict adherence to Vedic traditions.</p>
             </div>
 
-            <h4 className="text-deep-ocean font-bold text-xl mb-4">What's Included:</h4>
-            <ul className="space-y-3 mb-8">
+            <h4 className="font-serif text-deep-ocean font-bold text-xl mb-4">What's Included:</h4>
+            <ul className="font-serif text-x1 space-y-3 mb-8">
               {[
                 'Highly Experienced Vedic Pandit',
                 '100% Pure & Authentic Puja Samagri',
                 'Floral Arrangements & Setup',
                 'Traditional Prasad & Bhog Preparation'
               ].map((item, index) => (
-                <li key={index} className="flex items-center gap-3 text-charcoal-muted font-medium bg-white/50 p-4 rounded-2xl border border-white/40 shadow-sm">
+                <li key={index} className="flex items-center gap-3 text-charcoal-muted font-semibold bg-white/50 p-4 rounded-2xl border border-white/40 shadow-sm">
                   <div className="bg-sunset-light/20 p-1.5 rounded-full flex-shrink-0">
                     <svg className="w-4 h-4 text-sunset-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -327,15 +327,15 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
           </div> */}
 
           {/* Sticky Bottom Action Bar - MVP Contact Version */}
-          <div className="p-5 sm:p-6 border-t border-deep-ocean/10 bg-white/60 backdrop-blur-xl">
+          <div className="p-5 sm:p-0 border-t border-deep-ocean/10 bg-white/60 backdrop-blur-xl">
             <div className="bg-gradient-to-r from-sunset/10 to-sunset-dark/10 border border-sunset/20 rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-4 items-center justify-between">
               
               {/* Refined Message */}
               <div className="flex-1 text-center sm:text-left">
-                <h4 className="text-deep-ocean font-bold text-sm sm:text-base mb-1">
-                  Ready to invite blessings?
+                <h4 className="font-serif text-x1 text-deep-ocean font-bold mb-1">
+                Book it now for a Hassle Free Experience
                 </h4>
-                <p className="text-deep-ocean/70 text-xs sm:text-sm font-medium leading-relaxed">
+                <p className="font-serif text-x1 text-deep-ocean/70 leading-relaxed">
                 To schedule this ceremony, drop us a message with your date and time. We will handle the rest of the arrangements.
                 </p>
               </div>

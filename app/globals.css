@@ -8,8 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Map the custom Google Fonts to Tailwind classes */
+  --font-sans: var(--font-jakarta), sans-serif;
+  --font-serif: var(--font-cormorant), serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,11 +23,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* =========================================
-   Custom Utilities
+   Custom Utilities & Animations
    ========================================= */
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -38,4 +38,25 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* CUSTOM ANIMATION: Subtle Light Flow 
+  This moves the overlay layer slowly back and forth horizontally
+  while gently pulsing its opacity to simulate flowing light.
+*/
+@keyframes subtle-flow-pulse {
+  0%, 100% {
+    transform: translateX(0) scale(1.1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-3%) scale(1.1); /* Subtle shift left */
+    opacity: 0.8; /* Subtle brighten */
+  }
+}
+
+.animate-light-flow {
+  mix-blend-mode: screen; 
+  animation: subtle-flow-pulse 10s ease-in-out infinite;
+  will-change: transform, opacity;
 }

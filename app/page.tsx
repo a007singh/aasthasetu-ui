@@ -23,7 +23,7 @@ export default function Home() {
       />
 
       {/* Header / Logo Section */}
-      <header className="absolute top-6 left-6 md:top-8 md:left-10 z-50">
+      <header className="absolute top-1 left-1 md:top-1 md:left-1 z-50">
         <Link href="/">
           <img 
             src="/logo.png" 
@@ -32,26 +32,32 @@ export default function Home() {
                This makes the white background of the JPG transparent,
                matching the web page background perfectly.
             */
-            className="h-24 md:h-32 w-auto mix-blend-multiply contrast-125 opacity-90 hover:opacity-100 transition-opacity cursor-pointer drop-shadow-sm"
+            className="h-24 md:h-50 w-auto mix-blend-multiply contrast-125 opacity-90 hover:opacity-100 transition-opacity cursor-pointer drop-shadow-sm"
           />
         </Link>
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto pt-40 pb-24 px-6 text-center relative z-10">
-        <h1 className="text-6xl md:text-8xl font-extrabold mb-8 tracking-tight leading-none drop-shadow-hero text-cream-light">
-          Your Bridge to <span className="text-transparent bg-clip-text bg-gradient-to-r from-sunset-light to-sunset drop-shadow-glow">Divine Blessings.</span>
+      <section className="max-w-6xl mx-auto pt-25 pb-24 px-6 text-center relative z-10">
+        {/* <h1 className="text-5xl md:text-6xl mb-2 font-light text-white tracking-tight leading-none drop-shadow-hero text-cream-light">
+          Your Bridge to Divine Blessings.
         </h1>
-        <p className="text-2xl md:text-3xl text-warm-gray mb-16 max-w-4xl mx-auto drop-shadow-md font-medium leading-relaxed">
-          Premium, end-to-end Vedic ceremonies. From experienced Panditjis to the puja materials to the final Bhog, we handle it all.
+        <p className="text-2xl md:text-3xl text-white/80 text-warm-gray mb-16 max-w-4xl mx-auto drop-shadow-md font-normal leading-relaxed">
+          Premium, end-to-end Vedic ceremonies. From experienced Panditjis to the puja materials to the decoration to the final Bhog, we handle it all.
+        </p> */}
+
+        <h1 className="font-serif text-5xl md:text-6xl mb-4 font-light tracking-tight leading-tight text-white drop-shadow-hero">
+            Your Bridge to Divine Blessings.
+        </h1>
+        <p className="font-serif text-xl md:text-2xl text-warm-gray/90 mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
+          Premium, end-to-end Vedic ceremonies. From experienced Panditjis to the puja materials to the decoration to the final Bhog, we handle it all.
         </p>
         
         {/* Modern Search Bar / Trigger */}
-        <div 
+        {/* <div 
           className="relative max-w-3xl mx-auto group cursor-pointer" 
           onClick={() => setIsChatOpen(true)}
         >
-          {/* Glassmorphism background for search bar */}
           <div className="absolute inset-0 bg-glass-white backdrop-blur-md rounded-full shadow-2xl transition-all group-hover:bg-glass-white-hover border border-white/20"></div>
           <div className="relative flex items-center p-2">
             <span className="pl-6 text-3xl mr-4 drop-shadow">🔍</span>
@@ -67,13 +73,13 @@ export default function Home() {
               Ask Sarthi ✨
             </button>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Modern E-Commerce Grid Section */}
       <section className="max-w-7xl mx-auto px-6 pb-48 relative z-10">
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold drop-shadow-hero text-cream-light">Popular Ceremonies</h2>
+          <h2 className="font-serif text-4xl md:text-4xl font-light tracking-tight leading-tight text-white drop-shadow-hero">Popular Ceremonies</h2>
           
           {/* Modernized "View All" Link matching "View Details" style */}
           <Link 
@@ -83,7 +89,7 @@ export default function Home() {
             {/* Subtle animated shine effect on hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
             
-            <span className="relative z-10 text-cream-light group-hover:text-white font-semibold tracking-wide text-sm transition-colors duration-300 drop-shadow-sm">
+            <span className="relative z-10 text-white text-cream-light group-hover:text-black font-semibold tracking-wide text-sm transition-colors duration-300 drop-shadow-sm">
               View All
             </span>
             
@@ -124,10 +130,7 @@ export default function Home() {
                 * Monday, Wednesday, Thursday, Friday
               - Avoid:
                 * Amavasya
-                * Rahu Kaal
-
-              How to book:
-              Message us with your preferred date/time and occasion and we’ll guide you through the next steps.`}
+                * Rahu Kaal`}
           />
           <PoojaCard 
             title="Satynarayan Puja & Katha" 
@@ -146,10 +149,7 @@ export default function Home() {
 
               Auspicious Day & Timings:
               - Can be performed any day, with special significance on Purnima.
-              - Best times: morning or evening.
-
-              How to book:
-              Message us with your preferred date/time and occasion and we’ll guide you through the next steps.`}
+              - Best times: morning or evening. `}
           />
           <PoojaCard 
             title="Rudrabhishek Puja" 
@@ -172,10 +172,7 @@ export default function Home() {
               Auspicious Day & Timings:
               - Mondays (especially during the holy month of Shravan)
               - Pradosh Kaal
-              - Mahashivratri
-
-              How to book:
-              Message us with your preferred date/time and occasion and we’ll guide you through the next steps.`}
+              - Mahashivratri `}
           />
         </div>
       </section>
@@ -192,21 +189,21 @@ export default function Home() {
           {/* 1. Mobile Number / Call Us Pill */}
           <a 
             href="tel:+919876543210" 
-            className="group flex items-center space-x-4 bg-black/30 hover:bg-black/40 backdrop-blur-md px-6 py-3 md:py-4 rounded-full border border-white/15 hover:border-sunset/50 transition-all duration-300 shadow-2xl"
+            className="font-serif group flex items-center space-x-4 bg-black/30 hover:bg-black/40 backdrop-blur-md px-6 py-3 md:py-4 rounded-full border border-white/15 hover:border-sunset/50 transition-all duration-300 shadow-2xl"
           >
             <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 group-hover:bg-sunset transition-colors duration-300 shadow-sm border border-white/10">
               <svg className="w-4 h-4 md:w-5 md:h-5 text-white transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
             </div>
-            <span className="text-cream-light font-medium text-sm md:text-base tracking-wide drop-shadow-sm group-hover:text-white transition-colors">
+            <span className="text-cream-light text-white font-medium font-semibold text-sm md:text-base tracking-wide drop-shadow-sm group-hover:text-black transition-colors">
               +91 98765 43210
             </span>
           </a>
 
           {/* 2. Existing Socials Pill */}
           <div className="flex items-center space-x-6 bg-black/30 backdrop-blur-md px-8 py-4 rounded-full border border-white/15 shadow-2xl">
-            <span className="text-cream-light font-medium text-sm md:text-base mr-2 pr-6 border-r border-white/20 tracking-wide drop-shadow-sm">
+            <span className="font-serif text-cream-light text-white font-semibold text-sm md:text-base mr-2 pr-6 border-r border-white/20 tracking-wide drop-shadow-sm">
               Connect with us
             </span>
             
@@ -247,7 +244,7 @@ export default function Home() {
             {/* Subtle animated shine effect on hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
             
-            <span className="relative z-10 text-cream-light group-hover:text-white font-semibold tracking-wide text-lg transition-colors duration-300 drop-shadow-sm">
+            <span className="font-serif relative z-10 text-white text-cream-light group-hover:text-black font-semibold tracking-wide text-lg transition-colors duration-300 drop-shadow-sm">
               Discover Why Aastha Setu
             </span>
             
@@ -261,7 +258,7 @@ export default function Home() {
         </div>
 
         {/* Copyright Text */}
-        <p className="text-white/100 text-x1 mt-6 tracking-wide drop-shadow-md font-medium">
+        <p className="font-serif text-white/100 text-x1 mt-6 tracking-wide drop-shadow-md font-bold">
           © {new Date().getFullYear()} Aastha Setu. All rights reserved.
         </p>
 
