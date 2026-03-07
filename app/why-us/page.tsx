@@ -73,6 +73,39 @@ export default function WhyUsPage() {
 
       {/* NEW: Premium Top Right Navigation Pill (Desktop & Tablet) */}
       <div className="absolute top-6 right-6 md:top-8 md:right-10 z-50 hidden md:flex items-center gap-5 bg-black/20 hover:bg-black/30 backdrop-blur-md border border-white/15 shadow-xl rounded-full px-6 py-2.5 transition-all duration-300">
+
+        {/* Home Link */}
+        <a 
+          href="/" 
+          className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
+        >
+          Home
+        </a>
+        
+        {/* Elegant Divider */}
+        <div className="w-px h-4 bg-white/50"></div>
+
+        {/* Explore Link */}
+        <a 
+          href="/ceremonies" 
+          className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
+        >
+          Explore
+        </a>
+        
+        {/* Elegant Divider */}
+        <div className="w-px h-4 bg-white/50"></div>
+
+        <a 
+          href="/testimonials" 
+          className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
+        >
+          Testimonials
+        </a>
+
+        {/* Elegant Divider */}
+        <div className="w-px h-4 bg-white/50"></div>
+
         
         {/* Call Option */}
         <a 
@@ -116,7 +149,7 @@ export default function WhyUsPage() {
       </div>
 
       {/* Main Content Area */}
-      <section className="max-w-6xl mx-auto pt-25 pb-24 px-6 text-center relative z-10">
+      <section className="max-w-6xl mx-auto pt-30 pb-24 px-6 text-center relative z-10">
         
         {/* Header Title Section */}
         <div className="mx-auto max-w-3xl text-center mb-60">

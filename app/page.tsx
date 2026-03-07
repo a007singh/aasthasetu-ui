@@ -1,14 +1,29 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import PoojaCard from '@/components/PoojaCard';
 import ChatDrawer from '@/components/ChatDrawer';
 
 export default function Home() {
   const [isChatOpen, setIsChatOpen] = useState(false);
+  
+  // NEW: Reference to the scrollable container
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // NEW: Scroll function for the left/right buttons
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      // Get the width of one card + gap to scroll exactly one item at a time
+      const scrollAmount = window.innerWidth > 768 ? 432 : 320; 
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
-    <main className="min-h-screen font-sans text-text-light selection:bg-sunset selection:text-white relative">
+    <main className="min-h-screen font-sans text-text-light selection:bg-sunset selection:text-white relative overflow-x-hidden">
       
        {/* Pure CSS Background - Guarantees bottom anchor and zero compression */}
        <div 
@@ -37,8 +52,19 @@ export default function Home() {
         </Link>
       </header>
 
-      {/* NEW: Premium Top Right Navigation Pill (Desktop & Tablet) */}
+      {/* Premium Top Right Navigation Pill (Desktop & Tablet) */}
       <div className="absolute top-6 right-6 md:top-8 md:right-10 z-50 hidden md:flex items-center gap-5 bg-black/20 hover:bg-black/30 backdrop-blur-md border border-white/15 shadow-xl rounded-full px-6 py-2.5 transition-all duration-300">
+
+        {/* Explore Link */}
+        <a 
+          href="/ceremonies" 
+          className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
+        >
+          Explore
+        </a>
+        
+        {/* Elegant Divider */}
+        <div className="w-px h-4 bg-white/50"></div>
 
         {/* Why Us Link */}
         <Link 
@@ -46,6 +72,16 @@ export default function Home() {
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
           Why Aastha Setu
+        </Link>
+
+        {/* Elegant Divider */}
+        <div className="w-px h-4 bg-white/50"></div>
+
+        <Link 
+          href="/testimonials" 
+          className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
+        >
+          Testimonials
         </Link>
 
         {/* Elegant Divider */}
@@ -75,7 +111,7 @@ export default function Home() {
             aria-label="Instagram"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.097 3.097 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
+              <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.097 3.097 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
             </svg>
           </a>
           <a 
@@ -93,45 +129,16 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto pt-25 pb-24 px-6 text-center relative z-10">
-        {/* <h1 className="text-5xl md:text-6xl mb-2 font-light text-white tracking-tight leading-none drop-shadow-hero text-cream-light">
-          Your Bridge to Divine Blessings.
-        </h1>
-        <p className="text-2xl md:text-3xl text-white/80 text-warm-gray mb-16 max-w-4xl mx-auto drop-shadow-md font-normal leading-relaxed">
-          Premium, end-to-end Vedic ceremonies. From experienced Panditjis to the puja materials to the decoration to the final Bhog, we handle it all.
-        </p> */}
-
+      <section className="max-w-6xl mx-auto pt-30 pb-24 px-6 text-center relative z-10">
         <h1 className="font-serif text-5xl md:text-6xl mb-4 font-light tracking-tight leading-tight text-white drop-shadow-hero">
             Your Bridge to Divine Blessings.
         </h1>
         <p className="font-serif text-xl md:text-2xl text-warm-gray/90 mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
           Premium, end-to-end Vedic ceremonies. From experienced Panditjis to the puja materials to the decoration to the final Bhog, we handle it all.
         </p>
-        
-        {/* Modern Search Bar / Trigger */}
-        {/* <div 
-          className="relative max-w-3xl mx-auto group cursor-pointer" 
-          onClick={() => setIsChatOpen(true)}
-        >
-          <div className="absolute inset-0 bg-glass-white backdrop-blur-md rounded-full shadow-2xl transition-all group-hover:bg-glass-white-hover border border-white/20"></div>
-          <div className="relative flex items-center p-2">
-            <span className="pl-6 text-3xl mr-4 drop-shadow">🔍</span>
-            <input 
-              type="text" 
-              placeholder="Would you like to book a Pooja or find Samagri?" 
-              className="w-full bg-transparent focus:outline-none text-xl placeholder-gray-200 text-cream-light font-medium py-4 pointer-events-none drop-shadow-sm"
-              readOnly
-            />
-            <button 
-              className="bg-gradient-to-r from-sunset to-sunset-dark hover:from-sunset-light hover:to-sunset text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-lg transform group-hover:scale-105"
-            >
-              Ask Sarthi ✨
-            </button>
-          </div>
-        </div> */}
       </section>
 
-      {/* Modern E-Commerce Grid Section */}
+      {/* Modern E-Commerce Carousel Section */}
       <section className="max-w-7xl mx-auto px-6 pb-48 relative z-10">
         <div className="flex items-center justify-between mb-12">
           <h2 className="font-serif text-4xl md:text-4xl font-light tracking-tight leading-tight text-white drop-shadow-hero">Popular Ceremonies</h2>
@@ -157,78 +164,120 @@ export default function Home() {
           </Link>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <PoojaCard 
-            title="Griha Pravesh & Vastu Shanti" 
-            price="₹5,100"
-            tag="Bestseller"
-            images={[
-              '/Grihpravesh_1.png', 
-              '/Grihpravesh_2.png',
-              '/Grihpravesh_3.png',
-              '/Grihpravesh_4.png'
-            ]}
-            shortdesc="An auspicious Vedic ritual performed before entering a home to purify the space and seek blessings for harmony, health, and prosperity."
-            description={`This pooja removes negative energies and ensures a positive and spiritually enriched beginning for the family in their new or renewed home.
+        {/* RE-DESIGNED: Horizontally Scrollable Carousel Wrapper */}
+        <div className="relative group flex items-center">
+          
+          {/* Left Arrow Button */}
+          <button 
+            onClick={() => scroll('left')}
+            className="absolute left-0 md:-left-6 z-20 flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-full bg-black/40 hover:bg-black/60 backdrop-blur-lg border border-white/20 text-white shadow-2xl transition-all duration-300 opacity-90 hover:scale-110"
+            aria-label="Scroll left"
+          >
+            <svg className="w-5 h-5 md:w-7 md:h-7 pr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
 
-              Depending on the situation, Grihpravesh is performed in different forms, each aligned with Vedic traditions and astrological guidelines.
-              Types of Grihpravesh Pooja
-              - Apoorva Grihpravesh – For entering a newly constructed home for the first time
-              - Sapoorva Grihpravesh – For re-entering a home after a period of absence
-              - Dwandwah Grihpravesh – After major repairs, renovations, or reconstruction
+          {/* Scrollable Container */}
+          <div 
+            ref={scrollContainerRef}
+            className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-4 px-2 w-full items-stretch"
+          >
+            {/* We wrap each PoojaCard in a strict-width div so they form a carousel instead of shrinking */}
+            
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Griha Pravesh & Vastu Shanti" 
+                price="₹5,100"
+                tag="Bestseller"
+                images={[
+                  '/Grihpravesh_1.png', 
+                  '/Grihpravesh_2.png',
+                  '/Grihpravesh_3.png',
+                  '/Grihpravesh_4.png'
+                ]}
+                shortdesc="An auspicious Vedic ritual performed before entering a home to purify the space and seek blessings for harmony, health, and prosperity."
+                description={`This pooja removes negative energies and ensures a positive and spiritually enriched beginning for the family in their new or renewed home.
 
-              Auspicious Day & Timings:
-              - Preferred Tithis:
-                * Dvitiya, Tritiya, Panchami, Saptami
-                * Dashami, Ekadashi, Dwadashi
-              - Auspicious Days:
-                * Monday, Wednesday, Thursday, Friday
-              - Avoid:
-                * Amavasya
-                * Rahu Kaal`}
-          />
-          <PoojaCard 
-            title="Satynarayan Puja & Katha" 
-            price="₹3,100"
-            tag="Trending"
-            images={[
-              '/Satyanarayan_Puja.png'
-            ]}
-            shortdesc="Invite prosperity, peace and good health into your home with the Satynarayan puja."
-            description={`Performed to fulfill wishes or offer thanks, this puja is traditionally observed on auspicious days and is especially recommended on Purnima. It’s perfect for life-events — housewarmings, birthdays, marriages and other celebrations.
+                  Depending on the situation, Grihpravesh is performed in different forms, each aligned with Vedic traditions and astrological guidelines.
+                  Types of Grihpravesh Pooja
+                  - Apoorva Grihpravesh – For entering a newly constructed home for the first time
+                  - Sapoorva Grihpravesh – For re-entering a home after a period of absence
+                  - Dwandwah Grihpravesh – After major repairs, renovations, or reconstruction
 
-              Why choose this puja:
-              - Seeks blessings for prosperity, peace and robust health.
-              - Helps fulfil personal wishes and express gratitude.
-              - Traditionally performed on auspicious occasions and especially meaningful on Purnima.
+                  Auspicious Day & Timings:
+                  - Preferred Tithis:
+                    * Dvitiya, Tritiya, Panchami, Saptami
+                    * Dashami, Ekadashi, Dwadashi
+                  - Auspicious Days:
+                    * Monday, Wednesday, Thursday, Friday
+                  - Avoid:
+                    * Amavasya
+                    * Rahu Kaal`}
+              />
+            </div>
 
-              Auspicious Day & Timings:
-              - Can be performed any day, with special significance on Purnima.
-              - Best times: morning or evening. `}
-          />
-          <PoojaCard 
-            title="Rudrabhishek Puja" 
-            price="₹4,500"
-            images={[
-              '/Rudrabhishek_1.png', 
-              '/Rudrabhishek_2.png'
-            ]}
-            shortdesc="Most sacred and powerful rituals dedicated to Lord Shiva."
-            description={`Performed with Vedic mantras and holy offerings, this puja helps remove obstacles, cleanse negativity, and bring inner peace, good health, and prosperity to the devotee and family.
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Satynarayan Puja & Katha" 
+                price="₹3,100"
+                tag="Trending"
+                images={[
+                  '/Satyanarayan_Puja.png'
+                ]}
+                shortdesc="Invite prosperity, peace and good health into your home with the Satynarayan puja."
+                description={`Performed to fulfill wishes or offer thanks, this puja is traditionally observed on auspicious days and is especially recommended on Purnima. It’s perfect for life-events — housewarmings, birthdays, marriages and other celebrations.
 
-              It is highly effective in reducing the effects of Graha Dosh and Pitru Dosh, making it ideal for those facing delays, stress, or recurring challenges in life. The puja holds special significance when performed during auspicious Shiva timings and festivals.
+                  Why choose this puja:
+                  - Seeks blessings for prosperity, peace and robust health.
+                  - Helps fulfil personal wishes and express gratitude.
+                  - Traditionally performed on auspicious occasions and especially meaningful on Purnima.
 
-              Why choose this puja:
-              - Removes obstacles and negative energies
-              - Brings peace, good health, and prosperity
-              - Helps reduce Graha Dosh and Pitru Dosh
-              - Strengthens spiritual and mental well-being
+                  Auspicious Day & Timings:
+                  - Can be performed any day, with special significance on Purnima.
+                  - Best times: morning or evening. `}
+              />
+            </div>
 
-              Auspicious Day & Timings:
-              - Mondays (especially during the holy month of Shravan)
-              - Pradosh Kaal
-              - Mahashivratri `}
-          />
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Rudrabhishek Puja" 
+                price="₹4,500"
+                images={[
+                  '/Rudrabhishek_1.png', 
+                  '/Rudrabhishek_2.png'
+                ]}
+                shortdesc="Most sacred and powerful rituals dedicated to Lord Shiva."
+                description={`Performed with Vedic mantras and holy offerings, this puja helps remove obstacles, cleanse negativity, and bring inner peace, good health, and prosperity to the devotee and family.
+
+                  It is highly effective in reducing the effects of Graha Dosh and Pitru Dosh, making it ideal for those facing delays, stress, or recurring challenges in life. The puja holds special significance when performed during auspicious Shiva timings and festivals.
+
+                  Why choose this puja:
+                  - Removes obstacles and negative energies
+                  - Brings peace, good health, and prosperity
+                  - Helps reduce Graha Dosh and Pitru Dosh
+                  - Strengthens spiritual and mental well-being
+
+                  Auspicious Day & Timings:
+                  - Mondays (especially during the holy month of Shravan)
+                  - Pradosh Kaal
+                  - Mahashivratri `}
+              />
+            </div>
+
+          </div>
+
+          {/* Right Arrow Button */}
+          <button 
+            onClick={() => scroll('right')}
+            className="absolute right-0 md:-right-6 z-20 flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-full bg-black/40 hover:bg-black/60 backdrop-blur-lg border border-white/20 text-white shadow-2xl transition-all duration-300 opacity-90 hover:scale-110"
+            aria-label="Scroll right"
+          >
+            <svg className="w-5 h-5 md:w-7 md:h-7 pl-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
         </div>
       </section>
 
@@ -238,7 +287,7 @@ export default function Home() {
       {/* Modern Floating Glass Footer & Social Links */}
       <footer className="w-full pb-12 pt-8 flex flex-col items-center justify-center relative z-10">
         
-        {/* NEW: Container for Side-by-Side Contact Pills */}
+        {/* Container for Side-by-Side Contact Pills */}
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
           
           {/* 1. Mobile Number / Call Us Pill */}
@@ -280,7 +329,7 @@ export default function Home() {
               href="https://www.facebook.com/profile.php?id=61586128941791" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white hover:text-sunset-light transition-all duration-300 transform hover:scale-110 drop-shadow-md hover:drop-shadow-glow"
+              className="text-white hover:text-sunset-light transition-transform duration-300 hover:scale-110 drop-shadow-md hover:drop-shadow-glow"
               aria-label="Facebook"
             >
               <svg className="w-6 h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -290,7 +339,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* RE-DESIGNED: Modernized Trendy Why Us Link */}
+        {/* Modernized Trendy Why Us Link */}
         <div className="mt-10 flex items-center justify-center relative z-20">
           <Link 
             href="/why-us" 
