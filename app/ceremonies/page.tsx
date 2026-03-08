@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef } from 'react';
 import PoojaCard from '@/components/PoojaCard';
+import Link from 'next/link';
 
 export default function CeremoniesCatalog() {
   // NEW: State to control the mobile dropdown menu
@@ -38,13 +39,13 @@ export default function CeremoniesCatalog() {
 
       {/* Header / Logo Section (Links back to home) */}
       <header className="absolute top-1 left-1 md:top-1 md:left-1 z-40">
-        <a href="/">
+        <Link href="/">
           <img 
             src="/logo.png" 
             alt="Aastha Setu Logo" 
             className="h-24 md:h-50 w-auto mix-blend-multiply contrast-125 opacity-90 hover:opacity-100 transition-opacity cursor-pointer drop-shadow-sm"
           />
-        </a>
+        </Link>
       </header>
 
       {/* =========================================================
@@ -87,9 +88,9 @@ export default function CeremoniesCatalog() {
             className="absolute top-16 right-4 w-64 bg-black/70 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-5 flex flex-col gap-4"
             onClick={(e) => e.stopPropagation()} 
           >
-            <a href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Home</a>
-            <a href="/why-us" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Why Aastha Setu</a>
-            <a href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Testimonials</a>
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Home</Link>
+            <Link href="/why-us" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Why Aastha Setu</Link>
+            <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Testimonials</Link>
             
             <div className="flex flex-col gap-3 pb-3 border-b border-white/10 pt-1">
               <span className="text-sunset-light text-xs font-bold uppercase tracking-wider">Call Us</span>
@@ -122,33 +123,33 @@ export default function CeremoniesCatalog() {
       <div className="absolute top-6 right-6 md:top-8 md:right-10 z-50 hidden md:flex items-center gap-5 bg-black/20 hover:bg-black/30 backdrop-blur-md border border-white/15 shadow-xl rounded-full px-6 py-2.5 transition-all duration-300">
 
         {/* Home Link */}
-        <a 
+        <Link 
           href="/" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
           Home
-        </a>
+        </Link>
         
         {/* Elegant Divider */}
         <div className="w-px h-4 bg-white/50"></div>
 
         {/* Why Us Link */}
-        <a 
+        <Link 
           href="/why-us" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
           Why Aastha Setu
-        </a>
+        </Link>
         
         {/* Elegant Divider */}
         <div className="w-px h-4 bg-white/50"></div>
 
-        <a 
+        <Link 
           href="/testimonials" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
           Testimonials
-        </a>
+        </Link>
 
         {/* Elegant Divider */}
         <div className="w-px h-4 bg-white/50"></div>
@@ -391,7 +392,7 @@ export default function CeremoniesCatalog() {
 
       {/* Modernized Trendy Why Us Link */}
       <div className="mt-10 flex items-center justify-center relative z-20">
-        <a 
+        <Link 
           href="/why-us" 
           className="group relative inline-flex items-center gap-4 px-8 py-3.5 bg-black/20 hover:bg-black/40 backdrop-blur-md border border-white/15 hover:border-sunset/50 rounded-full transition-all duration-500 ease-out shadow-lg overflow-hidden cursor-pointer"
         >
@@ -408,7 +409,7 @@ export default function CeremoniesCatalog() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </span>
-        </a>
+        </Link>
       </div>
 
       {/* Copyright Text */}

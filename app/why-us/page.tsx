@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 // Aastha Setu Core Values
 const features = [
@@ -67,13 +68,13 @@ export default function WhyUsPage() {
 
       {/* Header / Logo Section (Links back to home) */}
       <header className="absolute top-1 left-1 md:top-1 md:left-1 z-40">
-        <a href="/">
+        <Link href="/">
           <img 
             src="/logo.png" 
             alt="Aastha Setu Logo" 
             className="h-24 md:h-50 w-auto mix-blend-multiply contrast-125 opacity-90 hover:opacity-100 transition-opacity cursor-pointer drop-shadow-sm"
           />
-        </a>
+        </Link>
       </header>
 
       {/* =========================================================
@@ -116,9 +117,9 @@ export default function WhyUsPage() {
             className="absolute top-16 right-4 w-64 bg-black/70 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-5 flex flex-col gap-4"
             onClick={(e) => e.stopPropagation()} 
           >
-            <a href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Home</a>
-            <a href="/ceremonies" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Explore</a>
-            <a href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Testimonials</a>
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Home</Link>
+            <Link href="/ceremonies" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Explore</Link>
+            <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Testimonials</Link>
             
             <div className="flex flex-col gap-3 pb-3 border-b border-white/10 pt-1">
               <span className="text-sunset-light text-xs font-bold uppercase tracking-wider">Call Us</span>
@@ -151,33 +152,33 @@ export default function WhyUsPage() {
       <div className="absolute top-6 right-6 md:top-8 md:right-10 z-50 hidden md:flex items-center gap-5 bg-black/20 hover:bg-black/30 backdrop-blur-md border border-white/15 shadow-xl rounded-full px-6 py-2.5 transition-all duration-300">
 
         {/* Home Link */}
-        <a 
+        <Link 
           href="/" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
           Home
-        </a>
+        </Link>
         
         {/* Elegant Divider */}
         <div className="w-px h-4 bg-white/50"></div>
 
         {/* Explore Link */}
-        <a 
+        <Link 
           href="/ceremonies" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
           Explore
-        </a>
+        </Link>
         
         {/* Elegant Divider */}
         <div className="w-px h-4 bg-white/50"></div>
 
-        <a 
+        <Link 
           href="/testimonials" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
           Testimonials
-        </a>
+        </Link>
 
         {/* Elegant Divider */}
         <div className="w-px h-4 bg-white/50"></div>
