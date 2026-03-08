@@ -316,6 +316,255 @@ export default function CeremoniesCatalog() {
               />
             </div>
 
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Maha Mrityunjaya Path" 
+                price="₹4,500"
+                images={[
+                  '/Maha_Mrityunjaya_Path.png'
+                ]}
+                shortdesc="A sacred Vedic chanting dedicated to Lord Shiva, known as the conqueror of death."
+                description={`This powerful mantra is recited for protection from serious illnesses, accidents, fear, and negative energies, while promoting healing, longevity, peace, and spiritual growth.
+
+                  It is especially recommended during health challenges, mental stress, planetary imbalances, or as a preventive spiritual practice for overall well-being.
+
+                  Maha Mrityunjaya Mantra (महा मृत्युंजय मंत्र)
+                  ॐ त्र्यम्बकं यजामहे, सुगन्धिं पुष्टिवर्धनम्।
+                  उर्वारुकमिव बन्धनान्, मृत्योर्मुक्षीय मामृतात्॥
+
+                  Meaning (Hindi):
+                  हम त्रिनेत्रधारी भगवान शिव की पूजा करते हैं, 
+                  जो सबको सुगंध और पुष्टि (शक्ति) प्रदान करते हैं। 
+                  वे हमें मृत्यु के बंधन से मुक्त करें और अमरत्व की 
+                  ओर ले जाएं।
+
+                  Meaning (English):
+                  We worship the Three-Eyed Lord Shiva, who 
+                  nourishes and sustains all beings. May He 
+                  liberate us from the bondage of death and 
+                  lead us towards immortality.
+
+                  Benefits:
+                  - Protection from serious illness and accidents
+                  - Healing of body and mind
+                  - Longevity and good health
+                  - Removal of fear and negative energies
+                  - Relief from planetary doshas
+                  - Peace, stability, and spiritual growth
+
+                  Jaap Count Options:
+                  - Daily Practice: 108 Jaap
+                  - Special Purposes:
+                    * 11,000 Jaap
+                    * 51,000 Jaap
+                    * 1,25,000 Jaap (Anushthan)
+
+                  Auspicious Day & Timings:
+                  - Early morning (Brahma Muhurat)
+                  - Monday
+                  - Pradosh Kaal `}
+              />
+            </div>
+
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Namakaran Sanskar Puja" 
+                price="₹4,500"
+                images={[
+                  '/Namakaran_Sanskar_Puja.png'
+                ]}
+                shortdesc="One of the most important Hindu sanskars, performed to formally bestow a name upon a newborn child."
+                description={`This sacred ceremony invokes divine blessings, purifies the child, and marks their spiritual and social identity within the family and lineage.
+
+                  Performed with Vedic mantras and traditional rituals, Namakaran Sanskar seeks blessings for the child’s good health, long life, prosperity, and overall well-being, while introducing the child to relatives and society in an auspicious manner.
+
+                  Importance:
+                  - Purifies and blesses the newborn
+                  - Invokes divine protection and positive energies
+                  - Ensures good health, prosperity, and long life
+                  - Formally introduces the child to family and lineage
+
+                  Auspicious Day & Timings:
+                  - Commonly performed on the 11th, 12th, or 21st day after birth
+                  - Can also be done on any auspicious muhurat, as advised by Panditji
+                  - Preferably conducted in the morning `}
+              />
+            </div>
+
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Sundarkand Path" 
+                price="₹4,500"
+                images={[
+                  '/Sundarkand_Path_1.png'
+                ]}
+                shortdesc="Sundarkand Path is the 5th chapter of the Ramayana, describing the divine journey of Hanuman ji to Lanka — finding Mata Sita, burning Lanka, and delivering Shri Ram’s message."
+                description={`This sacred ceremony invokes divine blessings, purifies the child, and marks their spiritual and social identity within the family and lineage.
+
+                  Regular recitation of Sundarkand invokes the blessings of Hanuman ji, Shri Ram, and Mata Sita, helping devotees overcome fear, negativity, and obstacles while bringing peace, prosperity, and strength.
+
+                  Benefits:
+                  - Removal of obstacles and negative energies
+                  - Protection from evil, fear, and black magic
+                  - Peace and prosperity in the home
+                  - Courage, strength, and self-confidence
+                  - Quick solutions to ongoing problems
+                  - Relief from Shani, Rahu, and Ketu doshas
+                  - Divine grace of Hanuman ji, Shri Ram & Mata Sita
+
+                  Auspicious Day & Timings:
+                  - Tuesdays and Saturdays (especially auspicious for Hanuman ji)
+                  - Early morning (Brahma Muhurat)
+                  - Evening after sunset (Shubh time)
+
+                  Special Rules for Wish Fulfillment (Sankalp Path):
+                  - 7-Day Sundarkand Path – Daily recitation for 7 consecutive days
+                  - 5 Tuesday Path – Every Tuesday for 5 weeks
+                  - 40-Day Sadhana – Daily path with diya and Sankalp `}
+              />
+            </div>
+
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Navgrah Shanti Puja" 
+                price="₹4,500"
+                images={[
+                  '/Navgrah_Shanti_Puja.png'
+                ]}
+                shortdesc="A sacred Vedic ritual performed to appease the nine planets (Navagrahas) and balance their influence in one’s horoscope."
+                description={`When planetary positions cause obstacles, delays, or instability in life, this puja helps reduce their negative effects and brings harmony, peace, and progress.
+
+                  It is especially recommended for individuals facing doshas, health concerns, career blocks, marriage delays, or financial and business challenges.
+
+                  The Nine Planets (Navgrahas):
+                  - Surya – Sun
+                  - Chandra – Moon
+                  - Mangal – Mars
+                  - Budh – Mercury
+                  - Guru – Jupiter
+                  - Shukra – Venus
+                  - Shani – Saturn
+                  - Rahu
+                  - Ketu
+
+                  When is Navgrah Shanti Puja Recommended?:
+                  - Kundli Dosha
+                  - Sade Sati & Shani Dhaiya
+                  - Mangal Dosha
+                  - Rahu–Ketu Dosha
+                  - Delay in marriage
+                  - Health-related issues
+                  - Business & financial problems
+                  - Career obstacles and instability
+
+                  Pooja Vidhi (Ritual Steps):
+                  - Ganesh Poojan
+                  - Kalash Sthapana
+                  - Navgrah Avahan
+                  - Navgrah Mantra Japa
+                  - Havan
+                  - Purnahuti
+                  - Aarti
+                  - Prasad Distribution
+
+                  Auspicious Day & Timings:
+                  - Monday, Thursday, Saturday
+                  - Shukla Paksha 
+                  
+                  Pandit Ji Requirement:
+                  - 1 to 9 Pandits, depending on horoscope and ritual scale `}
+              />
+            </div>
+
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Durga Path (Chandi / Durga Saptashati Path)" 
+                price="₹4,500"
+                images={[
+                  '/Durga_Path.png'
+                ]}
+                shortdesc="A highly potent Vedic recitation dedicated to Maa Durga."
+                description={`It is performed to seek divine protection, courage, success, and victory over obstacles and negative forces.
+
+                  This sacred path is especially recommended during Navratri, as well as on birthdays, anniversaries, new beginnings, or during challenging phases of life involving health, finances, legal matters, or enemy troubles.
+
+                  Significance:
+                  - Removes fear, negativity, and obstacles
+                  - Brings divine protection, prosperity, and success
+                  - Enhances confidence, courage, and spiritual energy
+                  - Beneficial for health issues, legal disputes, financial stress, and enemy-related problems
+                  - Highly auspicious during Navratri, Ashtami, and Navami
+
+                  Main Scriptures Recited:
+                  - Durga Saptashati (700 Shlokas)
+                  - Devi Mahatmyam from Markandeya Puran
+                  - Kavach, Argala Stotra & Kilak
+
+                  Types of Durga Path:
+                  - Ek Path – Single recitation
+                  - 3 Path – For quick results
+                  - 7 Path – For strong protection
+                  - 9 Path – For major obstacles
+                  - 11, 21, 51, 108 Paths – For special wishes and siddhi
+                  - Sampoorna Chandi Path – Complete ritual with homam (havan)
+
+                  Duration of Puja:
+                  - Single Path: 1.5 – 2 hours
+                  - Sampoorna Chandi Path with Havan: 4 – 6 hours
+                  - Multiple Paths: Conducted over multiple days as per count
+
+                  Auspicious Day & Timings:
+                  - Navratri (all 9 days)
+                  - Ashtami & Navami
+                  - Tuesdays & Fridays`}
+              />
+            </div>
+
+            <div className="w-[85vw] sm:w-[350px] md:w-[400px] flex-none snap-center flex flex-col h-full">
+              <PoojaCard 
+                title="Bhajan Mandali" 
+                price="₹4,500"
+                images={[
+                  '/Bhajan_Mandali.png'
+                ]}
+                shortdesc="A traditional devotional group of singers and musicians who perform bhajans, kirtans, and aartis in praise of God."
+                description={`Rooted in Indian spiritual and cultural traditions, Bhajan Mandali programs uplift the mind, spread devotion, and create an atmosphere of peace, unity, and spiritual awareness.
+
+                  These programs are ideal for religious functions, festivals, and family ceremonies, bringing people together through devotion and divine music.
+
+                  Purpose:
+                  - Spread spiritual knowledge and devotion (Bhakti)
+                  - Conduct bhajan, kirtan, and satsang sessions
+                  - Participate in religious ceremonies and festivals
+                  - Promote Indian spiritual and cultural values
+                  - Encourage youth participation in devotional activities
+
+                  Members of Bhajan Mandali
+                  A typical mandali includes:
+                  - Lead Singer (Mukhiya / Gayak)
+                  - Chorus Singers
+                  - Harmonium Player
+                  - Tabla / Dholak Player
+                  - Manjira Player
+                  - Sound System Operator (if required)
+
+                  Occasions:
+                  - Satyanarayan Pooja
+                  - Griha Pravesh (House Warming)
+                  - Navratri
+                  - Ram Navami
+                  - Janmashtami
+                  - Shivratri
+                  - Kirtan & Satsang Programs
+                  - Shraddh / Terahvi Bhajan
+
+                  Duration of Programs:
+                  - Short Program: 1 – 2 hours
+                  - Medium Program: 3 – 4 hours
+                  - Full Night Jagran: 6 – 10 hours `}
+              />
+            </div>
+
           </div>
 
           {/* Right Arrow Button */}
