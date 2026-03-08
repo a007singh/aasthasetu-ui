@@ -363,7 +363,7 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
 
                 {/* WhatsApp Button */}
                 <a 
-                  href="https://wa.me/919876543210?text=Hari%20Om!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20Pooja." 
+                  href="https://wa.me/919742947406?text=Hari%20Om!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20Pooja." 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold py-2.5 px-4 rounded-xl shadow-sm transition-all hover:shadow-md hover:scale-105"
