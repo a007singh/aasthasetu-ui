@@ -90,7 +90,7 @@ export default function CeremoniesCatalog() {
           >
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Home</Link>
             <Link href="/why-us" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Why Aastha Setu</Link>
-            <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Testimonials</Link>
+            <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Customer Spotlight</Link>
             
             <div className="flex flex-col gap-3 pb-3 border-b border-white/10 pt-1">
               <span className="text-sunset-light text-xs font-bold uppercase tracking-wider">Call Us</span>
@@ -148,7 +148,7 @@ export default function CeremoniesCatalog() {
           href="/testimonials" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
-          Testimonials
+          Customer Spotlight
         </Link>
 
         {/* Elegant Divider */}

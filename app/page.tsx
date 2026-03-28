@@ -92,7 +92,7 @@ export default function Home() {
           >
             <Link href="/ceremonies" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Explore</Link>
             <Link href="/why-us" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Why Aastha Setu</Link>
-            <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Testimonials</Link>
+            <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium tracking-wide text-lg border-b border-white/10 pb-3">Customer Spotlight</Link>
             
             <div className="flex flex-col gap-3 pb-3 border-b border-white/10 pt-1">
               <span className="text-sunset-light text-xs font-bold uppercase tracking-wider">Call Us</span>
@@ -150,7 +150,7 @@ export default function Home() {
           href="/testimonials" 
           className="font-sans font-medium text-sm text-white hover:text-sunset-light transition-colors duration-300 tracking-wide"
         >
-          Testimonials
+          Customer Spotlight
         </Link>
 
         {/* Elegant Divider */}
@@ -211,6 +211,7 @@ export default function Home() {
           Premium, end-to-end Vedic ceremonies. From experienced Panditjis to the puja materials to the decoration to the final Bhog, we handle it all.
         </p>
       </section>
+      
 
       {/* Modern E-Commerce Carousel Section */}
       <section className="max-w-7xl mx-auto px-6 pb-48 relative z-10">
