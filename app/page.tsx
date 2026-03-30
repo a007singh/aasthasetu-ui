@@ -207,7 +207,7 @@ export default function Home() {
         <h1 className="font-serif text-5xl md:text-6xl mb-4 font-light tracking-tight leading-tight text-white drop-shadow-hero">
             Your Bridge to Divine Blessings.
         </h1>
-        <p className="font-serif text-xl md:text-2xl text-warm-gray/90 mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
+        <p className="font-serif text-xl md:text-2xl text-white mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
           Premium, end-to-end Vedic ceremonies. From experienced Panditjis to the puja materials to the decoration to the final Bhog, we handle it all.
         </p>
       </section>

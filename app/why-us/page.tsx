@@ -240,7 +240,7 @@ export default function WhyUsPage() {
           Why Aastha Setu ?
           </h1>
 
-          <p className="font-serif text-xl md:text-2xl text-warm-gray/90 mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
+          <p className="font-serif text-xl md:text-2xl text-white mb-16 max-w-3xl mx-auto drop-shadow-md font-semibold leading-relaxed">
             Rooted in tradition and purity, we ensure seamless arrangements with the utmost care, honoring your rituals and creating spiritually uplifting experiences.
           </p>
         </div>
@@ -256,7 +256,7 @@ export default function WhyUsPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 shadow-inner border border-white/10 transition-colors duration-300 group-hover:bg-white/20">
                   {feature.icon}
                 </div>
-                <h3 className="font-serif text-2xl text-charcoal-muted font-semibold tracking-wide text-cream-light drop-shadow-sm">
+                <h3 className="font-serif text-2xl text-white font-semibold tracking-wide text-cream-light drop-shadow-sm">
                   {feature.title}
                 </h3>
               </div>
