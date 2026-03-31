@@ -265,15 +265,12 @@ export default function PoojaCard({ title, shortdesc, description, price, tag, i
               )}
             </div>
 
-            <div className="flex items-center gap-3 mb-6">
-              {/* <span className="text-charcoal-muted text-sm font-medium flex items-center gap-1 bg-white/40 px-3 py-1.5 rounded-full">
-                {price}
-              </span> */}
+            {/* <div className="flex items-center gap-3 mb-6">
               <span className="text-charcoal-muted text-sm font-medium flex items-center gap-1 bg-white/40 px-3 py-1.5 rounded-full">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 Approx 2-3 Hours
               </span>
-            </div>
+            </div> */}
 
             {/* <div className="font-serif font-bold text-x1 text-base text-deep-ocean font-medium leading-relaxed mb-8 whitespace-pre-wrap">
               {description}
