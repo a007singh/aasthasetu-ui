@@ -11,7 +11,7 @@ const testimonials = [
     ceremony: "Khatu Shyamji Bhajan / Faag Utsav",
     text: "Strongly recommend the Aastha Setu Services",
     avatar: "", 
-    reviewImage: "/feedback_1.jpg", 
+    reviewImage: "/feedback_mahak.jpg", 
     rating: 5,
   },
   {
@@ -34,16 +34,26 @@ const testimonials = [
     reviewImage: "", 
     rating: 5,
   },
-  // {
-  //   id: 4,
-  //   name: "Dr. Meera Iyer",
-  //   location: "Chennai",
-  //   ceremony: "Satyanarayan Katha",
-  //   text: "Purity and punctuality are very important to my family. The Panditji arrived exactly on time, and the quality of the Puja materials provided was premium. A truly uplifting experience.",
-  //   avatar: "", 
-  //   reviewImage: "",
-  //   rating: 5,
-  // },
+  {
+    id: 4,
+    name: "Darshika Bhargava",
+    location: "Bengaluru",
+    ceremony: "Satyanarayan Katha",
+    text: "Smooth and satisfying experience",
+    avatar: "", 
+    reviewImage: "/feedback_darshika.jpg",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Garima Goel",
+    location: "Bengaluru",
+    ceremony: "Namkaran - Mundan",
+    text: "Highly recommend Aastha Setu for smooth process and excellent Panditji",
+    avatar: "", 
+    reviewImage: "/feedback_garima.jpg",
+    rating: 5,
+  },
 ];
 
 export default function EditorialTestimonialsPage() {
