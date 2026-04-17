@@ -54,6 +54,16 @@ const testimonials = [
     reviewImage: "/feedback_garima.jpg",
     rating: 5,
   },
+  {
+    id: 6,
+    name: "Alpa",
+    location: "Bengaluru",
+    ceremony: "Baby Shower Ceremony",
+    text: "Everyone liked the pujas vidhi conducted by Panditji",
+    avatar: "", 
+    reviewImage: "/feedback_alpa.jpg",
+    rating: 5,
+  },
 ];
 
 export default function EditorialTestimonialsPage() {
