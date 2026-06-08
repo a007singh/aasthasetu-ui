@@ -57,7 +57,7 @@ export default function Home() {
       <div className="absolute top-4 right-4 z-[60] flex md:hidden items-center gap-3">
         {/* Quick Call Icon for Mobile */}
         <a 
-          href="tel:+919742947406"
+          href="tel:+919187399560"
           className="flex items-center justify-center w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white shadow-xl active:scale-95 transition-transform"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,14 +96,14 @@ export default function Home() {
             
             <div className="flex flex-col gap-3 pb-3 border-b border-white/10 pt-1">
               <span className="text-sunset-light text-xs font-bold uppercase tracking-wider">Call Us</span>
+              <a href="tel:+919187399560" className="text-white text-base tracking-wide flex items-center gap-2 hover:text-sunset-light transition-colors">
+                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                 +91 9187399560
+              </a>
               <a href="tel:+919742947406" className="text-white text-base tracking-wide flex items-center gap-2 hover:text-sunset-light transition-colors">
                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                  +91 9742947406
               </a>
-              {/* <a href="tel:+919123456789" className="text-white text-base tracking-wide flex items-center gap-2 hover:text-sunset-light transition-colors">
-                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                 +91 91234 56789
-              </a> */}
             </div>
 
             <div className="flex items-center gap-5 pt-2">
@@ -162,13 +162,13 @@ export default function Home() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           <div className="flex items-center gap-2">
+            <a href="tel:+919187399560" className="font-sans font-medium text-sm tracking-wide hover:text-sunset-light transition-colors duration-300">
+              +91 9187399560
+            </a>
+            <span className="text-white/30 text-xs">|</span>
             <a href="tel:+919742947406" className="font-sans font-medium text-sm tracking-wide hover:text-sunset-light transition-colors duration-300">
               +91 9742947406
             </a>
-            {/* <span className="text-white/30 text-xs">|</span>
-            <a href="tel:+919123456789" className="font-sans font-medium text-sm tracking-wide hover:text-sunset-light transition-colors duration-300">
-              +91 91234 56789
-            </a> */}
           </div>
         </div>
 
@@ -362,13 +362,13 @@ export default function Home() {
               </svg>
             </div>
             <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 text-cream-light text-white font-normal text-sm md:text-base tracking-wide drop-shadow-sm">
+              <a href="tel:+919187399560" className="hover:text-sunset-light transition-colors duration-300">
+                +91 9187399560
+              </a>
+              <span className="hidden md:inline text-white/30 text-xs">|</span>
               <a href="tel:+919742947406" className="hover:text-sunset-light transition-colors duration-300">
                 +91 9742947406
               </a>
-              {/* <span className="hidden md:inline text-white/30 text-xs">|</span>
-              <a href="tel:+919123456789" className="hover:text-sunset-light transition-colors duration-300">
-                +91 91234 56789
-              </a> */}
             </div>
           </div>
 
